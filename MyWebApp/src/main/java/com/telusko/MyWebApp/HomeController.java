@@ -13,6 +13,16 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class HomeController {
 	
+	//http://localhost:8080/home?aid=1&aname=joy&lang=java
+	@RequestMapping("home") //set the url location
+	public ModelAndView home(Alien alien) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("obj",alien);
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	/*
 	//http://localhost:8080/home?name=barik
 	@RequestMapping("home") //set the url location
 	public ModelAndView home(@RequestParam("name")String myName) {
@@ -20,7 +30,7 @@ public class HomeController {
 		mv.addObject("name",myName);
 		mv.setViewName("home");
 		return mv;
-	}
+	}*/
 	
 	/*
 	@RequestMapping("home") //set the url location
