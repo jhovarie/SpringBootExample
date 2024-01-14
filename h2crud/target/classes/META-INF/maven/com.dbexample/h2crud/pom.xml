@@ -11,6 +11,7 @@
 	<groupId>com.dbexample</groupId>
 	<artifactId>h2crud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>h2crud</name>
 	<description>Crud example Spring Web Spring Data JPA H2 Database and tomcat jasper</description>
 	<properties>
@@ -25,7 +26,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -36,6 +36,38 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-jasper</artifactId>
+		    <version>10.1.17</version>
+		</dependency>
+		
+		<!-- 
+		if you are using rest api comment or remove spring-boot-starter-security
+		spring-boot-starter-security is recomended if you want to block
+		post request from any source and allow only web access
+		-->
+		<!--
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		-->
+		
+
 	</dependencies>
 
 	<build>
