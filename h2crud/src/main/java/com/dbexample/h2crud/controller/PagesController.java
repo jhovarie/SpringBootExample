@@ -42,7 +42,7 @@ public class PagesController {
     
     @GetMapping("/productmanagement")
     public String showProductManagement() {
-        return "dashboard"; // Assuming "dashboard.jsp" is your view
+        return "productmanagement"; // Assuming "dashboard.jsp" is your view
     }
     
     @GetMapping("/searchdatapage")
