@@ -1,0 +1,49 @@
+Certainly! I'll provide examples for saving, updating, and deleting data using 
+HTTP POST, PUT, and DELETE requests respectively. You can use Postman or any other API testing 
+tool to make these requests.
+
+//--------------------------------------------------------------
+Save (HTTP POST):
+
+To save a new product, send an HTTP POST request with the product data to 
+http://localhost:8080/products. Here's an example using Postman:
+
+Request type: POST
+URL: http://localhost:8080/products
+Body (raw, JSON):
+
+{
+  "name": "New Product",
+  "description": "Description of the new product",
+  "price": 39.99,
+  "quantity": 75
+}
+
+//--------------------------------------------------------------
+Update (HTTP PUT):
+
+To update an existing product, send an HTTP PUT request with the updated product data to 
+http://localhost:8080/products/{id}. Replace {id} with the actual ID of the product you want to 
+update. Here's an example using Postman:
+
+Request type: PUT
+URL: http://localhost:8080/products/1 (replace 1 with the actual ID)
+Body (raw, JSON):
+
+{
+  "name": "Updated Product",
+  "description": "Updated description",
+  "price": 49.99,
+  "quantity": 50
+}
+
+//--------------------------------------------------------------
+Delete (HTTP DELETE):
+
+To delete a product, send an HTTP DELETE request to http://localhost:8080/products/{id}. 
+Replace {id} with the actual ID of the product you want to delete. Here's an example using Postman:
+
+Request type: DELETE
+URL: http://localhost:8080/products/1 (replace 1 with the actual ID)
+After making these requests, you can verify the changes by fetching all products using an HTTP GET request to http://localhost:8080/products. The updated data should reflect the changes made through the save, update, and delete requests.
+
